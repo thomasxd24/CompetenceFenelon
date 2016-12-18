@@ -72,43 +72,12 @@ include("../../check.php");
                 <!-- Navbar Right Menu -->
                 <div class="navbar-custom-menu">
                     <ul class="nav navbar-nav">
-                        <!-- Messages: style can be found in dropdown.less-->
-                        <li class="dropdown messages-menu">
-                            <!-- Menu toggle button -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-envelope-o"></i>
-                                <span class="label label-success">10</span>
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li class="header">Vous avez 10 messages</li>
-                                <li>
-                                    <!-- inner menu: contains the messages -->
-                                    <ul class="menu pull-left">
-                                        <li><!-- start message -->
-                                            <a href="#">
-
-                                                <!-- Message title and timestamp -->
-                                                <h4>
-                                                    Service Technique
-                                                    <small><i class="fa fa-clock-o"></i> 5 mins</small>
-                                                </h4>
-                                                <!-- The message -->
-                                                <p>La systeme de massagerie est travail en cours...</p>
-                                            </a>
-                                        </li>
-                                        <!-- end message -->
-                                    </ul>
-                                    <!-- /.menu -->
-                                </li>
-
-                            </ul>
-                        </li>
-                        <!-- /.messages-menu -->
                         <li>
                             <a href="#"><?php echo $user_check ?></a>
                         </li>
                         <li>
-                            <a href="/logout.php"><i class="fa fa-sign-out"></i>Deconnexion</a>
+                            <a href="/logout.php"><i class="fa fa-sign-out"></i></a>
+                            <a href="/logout.php"><i class="fa fa-sign-out"></i></a>
                         </li>
 
                     </ul>
