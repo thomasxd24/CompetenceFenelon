@@ -1,8 +1,8 @@
 <?php
-include('login.php'); // Include Login Script
+include('../login.php'); // Include Login Script
 
 if ((isset($_SESSION['username']) != '')) {
-    header('Location: index.php');
+    header('Location: http://fenelon63.co.nf');
 }
 ?>
 <!DOCTYPE html>
@@ -10,7 +10,7 @@ if ((isset($_SESSION['username']) != '')) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Log in</title>
+    <title>Identification | FenelonCOM</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.6 -->
@@ -32,16 +32,16 @@ if ((isset($_SESSION['username']) != '')) {
     <![endif]-->
 </head>
 <body class="hold-transition login-page"
-      style="background-image: url('background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center;">
+      style="background-image: url('../background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center;">
 <div class="login-box">
     <div class="login-logo">
-        <a style="color: white;" href="index.php"><b>Fenelon</b>Competence</a>
+        <a style="color: white;" href="../index.php"><b>Fenelon</b>Competence</a>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
         <p class="login-box-msg">Identifiez-vous</p>
 
-        <form action="login.php" method="post">
+        <form action="../login.php" method="post">
             <div class="form-group has-feedback has-feedback-left">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
                 <input type="text" name="username" placeholder="Identifiant" id="username" autocorrect="off"
@@ -67,6 +67,14 @@ if ((isset($_SESSION['username']) != '')) {
                     <button type="submit" class="btn btn-primary btn-block btn-flat" name="submit">Me connecter</button>
                 </div>
                 <!-- /.col -->
+            </div>
+            <div class="row">
+                <?php 
+if (isset($_GET['var']))
+{
+    echo "Identifiant ou mot de passe incorrect";
+}
+?>
             </div>
         </form>
 

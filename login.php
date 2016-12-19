@@ -40,8 +40,10 @@ if (isset($_POST["submit"])) {
             }
             header("location: http://fenelon63.co.nf"); // Redirecting To Other Page
         } else {
-            $error = "Identifiant ou mot de passe incorrect";
+//            $error = "Identifiant ou mot de passe incorrect";
+            header("location: /connexion");
         }
+
 
     }
 }
