@@ -1,8 +1,32 @@
-.circle {
-    float:left;
+.circle-1 {
     width: 30%;
     padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
-    margin:1.66%;
-    background-color: #1E1E1E;
+    background-color: #76A797;
+    border-radius: 50%;
+    text-align: center;
+    margin: 1.66% auto;
+}
+.circle-2 {
+    /*float:left;*/
+    width: 30%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66% auto;
+    background-color: #EAC282;
+    border-radius: 50%;
+}
+.circle-3 {
+    /*float:left;*/
+    width: 30%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66% auto;
+    background-color: #D86344;
+    border-radius: 50%;
+}
+.circle-4 {
+    /*float:left;*/
+    width: 30%;
+    padding-bottom: 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66% auto;
+    background-color: #505050;
     border-radius: 50%;
 }

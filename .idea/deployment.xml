@@ -12,7 +12,6 @@
             <excludedPath local="true" path="dist" />
             <excludedPath path="bootstrap" />
             <excludedPath path="dist" />
-            <excludedPath path="plugins" />
           </excludedPaths>
         </serverdata>
       </paths>

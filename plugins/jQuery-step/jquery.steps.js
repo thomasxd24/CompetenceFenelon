@@ -68,6 +68,8 @@ $changed = false;
         var focusableQuery = 'input:visible';
         var position = parseInt( $active.closest('td').index()) + 1;
         var $test = $(':focus')[0];
+        $active.closest('tr').find('td:eq(3)').addClass("circle-1");
+        console.log($active.closest('tr').find('td:eq(3)'));
         if ($test.value.length == $test.maxLength && $key!=38 && !($changed)) {
             $next = $active
                 .closest('tr')
