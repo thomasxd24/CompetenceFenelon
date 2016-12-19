@@ -8,10 +8,12 @@
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
           </mappings>
           <excludedPaths>
-            <excludedPath local="true" path="bootstrap" />
-            <excludedPath local="true" path="dist" />
+            <excludedPath local="true" path="/bootstrap" />
+            <excludedPath local="true" path="/dist" />
             <excludedPath path="bootstrap" />
             <excludedPath path="dist" />
+            <excludedPath local="true" path="/plugins" />
+            <excludedPath path="/plugins" />
           </excludedPaths>
         </serverdata>
       </paths>
