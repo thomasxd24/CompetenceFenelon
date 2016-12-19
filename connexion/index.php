@@ -35,9 +35,19 @@ if ((isset($_SESSION['username']) != '')) {
       style="background-image: url('../background.jpg');background-repeat: no-repeat;background-attachment: fixed;background-position: center;">
 <div class="login-box">
     <div class="login-logo">
-        <a style="color: white;" href="../index.php"><b>Fenelon</b>Competence</a>
+        <a style="color: white;" ><b>Fenelon</b>Competence</a>
     </div>
-    <!-- /.login-logo -->
+    <?php
+    if (isset($_GET['error']))
+    {
+        echo '<div class="alert alert-danger fade in alert-dismissible">';
+            echo "<a href=\"#\" class=\"close\" data-dismiss=\"alert\" aria-label=\"close\">&times;</a>";
+            echo "<strong>Identifiant ou mot de passe incorrect</strong>";
+        echo "</div>    <!-- /.login-logo -->";
+    }
+
+
+        ?>
     <div class="login-box-body">
         <p class="login-box-msg">Identifiez-vous</p>
 
@@ -68,16 +78,8 @@ if ((isset($_SESSION['username']) != '')) {
                 </div>
                 <!-- /.col -->
             </div>
-            <div class="row">
-                <?php 
-if (isset($_GET['var']))
-{
-    echo "Identifiant ou mot de passe incorrect";
-}
-?>
-            </div>
-        </form>
 
+        </form>
     </div>
     <!-- /.login-box-body -->
 </div>
