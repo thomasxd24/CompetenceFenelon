@@ -89,7 +89,8 @@ $changed = false;
 var $loaded = false;
 
     $('ul.setup-panel li.active a').trigger('click');
-        function loadtable(c){
+    function loadtable(c){
+            console.log(c);
         $('#tablecom1-1').DataTable({
             "ajax": "/eleve/elevelist.php?classe="+c+"&com=1-1",
             "paging": false,

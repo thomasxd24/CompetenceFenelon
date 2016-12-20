@@ -23,6 +23,7 @@ include("../../check.php");
     <link rel="stylesheet" href="/dist/css/skins/_all-skins.min.css">
     <link rel="stylesheet" type="text/css" href="/plugins/datatables/dataTables.bootstrap.css">
     <link rel="stylesheet" type="text/css" href="/plugins/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/datepicker/datepicker3.css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -166,8 +167,19 @@ include("../../check.php");
                                             <br>
                                             <dt>Classe</dt>
                                             <dd>
-                                                <select class="form-control"  onchange="loadtable(this.value);" name="class">
+                                                <select class="form-control"  onchange="loadtable(this.value);console.log(this.value);" name="class">
                                                     <option selected value="" disabled>Selectionner une classe</option>
+                                                    <option>3A</option>
+                                                    <option>3B</option>
+                                                    <option>3C</option>
+                                                    <option>3D</option>
+                                                </select>
+                                            </dd>
+                                            <br>
+                                            <dt>Matiere</dt>
+                                            <dd>
+                                                <select class="form-control"  name="matiere">
+                                                    <option selected value="" disabled>Selectionner une matiere</option>
                                                     <option>3A</option>
                                                     <option>3B</option>
                                                     <option>3C</option>
@@ -175,13 +187,13 @@ include("../../check.php");
                                                 </select>
                                             </dd>
                                             <br>
-                                            <dt>Malesuada porta</dt>
-                                            <dd><input type="email" class="form-control" id="inputEmail3"
-                                                       placeholder="Email"></dd>
-                                            <br>
-                                            <dt>Felis euismod semper eget lacinia</dt>
-                                            <dd><input type="email" class="form-control" id="inputEmail3"
-                                                       placeholder="Email">
+                                            <dt>Date du Devoir</dt>
+                                            <dd><div class="input-group date" data-provide="datepicker" data-date-format="dd-mm-yyyy" data-date-language="fr">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    <input type="text" name="datedevoir"  class="form-control pull-right" id="datepicker" value="<?php echo date('d-m-Y') ?>">
+                                                </div>
                                             </dd>
                                         </dl>
                                     </div><!-- /.box-body -->
@@ -521,5 +533,7 @@ include("../../check.php");
 <script src="../../js/jquery.steps.js"></script>
 <script type="text/javascript" charset="utf8" src="/plugins/datatables/dataTables.bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf8" src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/plugins/datepicker/bootstrap-datepicker.js"></script>
+<script type="text/javascript" charset="utf8" src="/plugins/datepicker/locales/bootstrap-datepicker.fr.js"></script>
 </body>
 </html>

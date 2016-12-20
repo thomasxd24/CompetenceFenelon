@@ -15,6 +15,8 @@ include("check.php");
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/datatables/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/plugins/datatables/jquery.dataTables.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/dist/css/AdminLTE.min.css">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -120,30 +122,44 @@ include("check.php");
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-            <h1 class="display-1">Page Blanc</h1>
+            <h1 class="display-1">Tableau de bord</h1>
         </section>
 
         <!-- Main content -->
         <section class="content">
-            <!-- Your Page Content Here -->
-
-
+            <div class="box box-default">
+            <table id="tabledevoir"
+                   class="table table-bordered table-striped table-responsive hover dataTable text-center"
+                   role="grid" style="width:70%">
+                <thead>
+                <tr role="row">
+                    <th>Intitule du devoir</th>
+                    <th>Classe</th>
+                    <th>Profeseur</th>
+                    <th>Matiere</th>
+                    <th>Date du devoir</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
             </div>
+
         </section>
-        <!-- /.content -->
+        <!-- /.content --></div>
+
+    <footer class="main-footer">
+    <div class="container">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 2.3.7
+        </div>
+        <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
+        reserved.
     </div>
     <!-- /.container -->
+</footer>
+    <!-- /.container -->
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        <div class="container">
-            <div class="pull-right hidden-xs">
-                <b>Version</b> 2.3.7
-            </div>
-            <strong>Copyright &copy; 2014-2016 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights
-            reserved.
-        </div>
-        <!-- /.container -->
-    </footer>
 </div>
 <!-- ./wrapper -->
 
@@ -158,5 +174,18 @@ include("check.php");
 <!-- AdminLTE App -->
 <script src="../../dist/js/app.min.js"></script>
 <!-- table js -->
+<script type="text/javascript" charset="utf8" src="/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript" charset="utf8" src="/plugins/datatables/jquery.dataTables.min.js"></script>
+<script>
+    $('#tabledevoir').DataTable({
+        "ajax": {
+            "url": "getdevoirlist.php?profid=<?php echo $_SESSION['profid']; ?>"
+        },
+        "paging": false,
+        "ordering": false,
+        "info": false,
+        "searching": false,
+    });
+</script>
 </body>
 </html>

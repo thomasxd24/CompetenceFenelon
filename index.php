@@ -178,7 +178,7 @@ desired effect
 
         </div>
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2016 <a href="http://fenelon63.fr">Fenelon</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2016 <a href="http://fenelon63.fr">Fenelon</a>.</strong> Tous droits réservés
     </footer>
 
     <!-- Control Sidebar -->
